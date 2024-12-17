@@ -1,0 +1,24 @@
+{% extends "layout.html" %} 
+
+
+{% block title %}
+chai aur tweet
+{% endblock  %}
+
+
+{% block content %}
+<h2 class="text-center">welcome to django project</h2>
+
+<h3> Register
+    <form method="POST"  class="form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="btn btn-warning" type="submit">
+            Register
+        </button>
+    </form>
+
+</h3>
+<p>Don't have account <a href="{% url 'login' %}">Login</a> </p>
+
+{% endblock  %}
